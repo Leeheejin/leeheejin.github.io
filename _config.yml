@@ -109,3 +109,5 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+
+remote_theme: aweekj/Kiko-now
