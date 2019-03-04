@@ -3,10 +3,10 @@
 #
 
 # Name of your site (displayed in the header)
-name: Kiko Now
+name: 웰시고기
 
 # Short bio or description (displayed in the header)
-description: Web Developer from Somewhere
+description: 개발괴발 && 일상 블로그
 
 #
 # Flags below are optional
@@ -20,16 +20,12 @@ avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/je
 # and URL Link(e.g. 'Theme' tab below) tabs. If you don't need one, just delete
 # it from the list(Delete '- name: ' and 'url: ', too!)
 navigation:
-  - name: Blog
+  - name: DevDeb
     url: /
-  - name: About
-    url: /about
   - name: Archive
     url: /archive
-  - name: Tags
-    url: /tags
-  - name: Theme
-    url: https://github.com/AWEEKJ/kiko-now
+  - name: About
+    url: /about
 
 # Pagination
 paginate: 5
@@ -38,7 +34,7 @@ paginate: 5
 footer-links:
   behance: # https://www.behance.net/<username>
   dribbble:
-  email:
+  email: leinaere@naver.com
   facebook:
   flickr:
   github: AWEEKJ/kiko-now
@@ -49,7 +45,7 @@ footer-links:
   rss: # just type anything here for a working RSS icon
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   tumblr: # https://<username>.tumblr.com
-  twitter: jekyllrb
+  twitter: https://twitter.com/teemenobllew
   youtube: # channel/<your_long_string> or user/<user-name>
 
 # Text under the icons in footer
