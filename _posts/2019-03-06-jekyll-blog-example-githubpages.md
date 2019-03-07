@@ -22,9 +22,10 @@ comments: true
 #### 지킬은 정적 페이지 생성 도구로써, 마크다운 형식으로 생성해주는 도구입니다.
 
 먼저 지킬을 설치합니다.
+터미널을 열어 해당 명령어를 입력합니다.
 
 ```
-$ sudo gem install jekyll
+sudo gem install jekyll
 ```
 
 지킬을 실행하기 위해 디렉토리를 하나 만듭니다.
