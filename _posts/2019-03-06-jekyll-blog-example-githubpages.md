@@ -137,7 +137,7 @@ Username for 'https://github.com': leeheejin
 Password for 'https://leeheejin@github.com':
 ```
 
-이후 비밀번호를 입력한 뒤
+이후 비밀번호를 입력한 뒤에
 
 ```
 Enumerating objects: 11, done.
