@@ -164,7 +164,7 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 *이 포스트에서는 [kiko-now](https://github.com/barryclark/jekyll-now) 를 사용하였습니다.*
 
-![2019-03-06-4](https://user-images.githubusercontent.com/9789023/53950561-be07ae00-410f-11e9-9344-dee84561cec1.png)
+![2019-03-06-4](https://user-images.githubusercontent.com/9789023/53951873-c7464a00-4112-11e9-82b1-7d92aa61d3ee.png)
 
 해당 레포지토리에서 오른쪽 상단의 **Fork** 버튼을 클릭하여 자신의 레포지토리로 퍼올 수 있습니다.
 
