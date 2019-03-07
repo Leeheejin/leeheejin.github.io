@@ -191,4 +191,45 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 ## 4. 커스텀 도메인(Custom Domain) 연결하기
 
+이제 커스텀 도메인을 연결해 봅시다.
+
+커스텀 도메인을 연결하기 위해서는 **도메인을 가지고 계셔야 합니다.**
+
+저는 [godaddy](https://kr.godaddy.com/offers/domains/godaddy-b?isc=gofkkr06&countryview=1&currencyType=krw&gclid=Cj0KCQiAn4PkBRCDARIsAGHmH3evMjXWM3x7N_EWCSSfOZbWgvPIf5VagNGHgZRxjwJ1Y9aM3rM9ZVwaAimREALw_wcB&gclsrc=aw.ds)
+에서 [welsigogi.dev](https://welsigogi.dev) 도메인을 구입하였습니다. 해당 도메인을 가지고 블로그에 연결해 보려고 합니다.
+
+먼제 godaddy에 접속하여 도메인을 사용하기 위한 설정을 해 줄 겁니다.
+
+![2019-03-06-9](https://user-images.githubusercontent.com/9789023/53952599-8c451600-4114-11e9-9a1c-4f58a630efb8.png)
+
+사용하고자 하는 도메인의 관리 페이지에 들어갑니다. DNS 관리 페이지에서 **레코드** 카테고리와 하단의 **도메인** 카테고리를 수정할겁니다.
+ 
+![2019-03-06-10](https://user-images.githubusercontent.com/9789023/53952793-25742c80-4115-11e9-8881-92736234c910.png)
+
+위 이미지는 수정을 마친 최종 화면입니다.
+**레코드** 카테고리에서 유형이 **A** 항목을 찾아 값을 `185.199.108.153`로 업데이트합니다.
+그리고 유형이 **CNAME** 항목을 변경합니다. 이름은 **www** 입니다.해당 부분을 커스텀 도메인의 주소로 바꾸고 값을 `[github 사용자명].github.io`로 바꿉니다.
+그리고 하단의 **추가** 버튼을 눌러 **A** 유형으로 세개를 만듭니다. 값 부분에 각각 `185.199.109.153`, `185.199.110.153`, `185.199.111.153` 으로 만드시면 됩니다.
+TTL은 위 이미지와 똑같이 하시면 됩니다.
+
+그리고,
+하단의 **도메인** 부분에서 **추가**를 눌러 다음과 같이 작성해줍니다.
+
+![2019-03-06-11](https://user-images.githubusercontent.com/9789023/53953275-41c49900-4116-11e9-9cee-9e386bee055e.png)
+
+> `leeheejin.github.io` 값을 독자분들은 `[github 사용자명].github.io`로 변경해서 넣으시면 됩니다.
+
+Godaddy에서의 설정은 이것으로 끝입니다. 이제는 깃헙 레포지토리에서 설정을 해 주어야 합니다.
+ 
+자신의 `[github 사용자명].github.io` 레포지토리의 **Settings** 에서 하단으로 내려오면 GitHub Pages 항목을 보실 수 있습니다.
+
+![2019-03-06-8](https://user-images.githubusercontent.com/9789023/53952162-784ce480-4113-11e9-8b7c-771520da4103.png)
+
+> 현재 이미지에서는 이미 도메인을 연결하였기 때문에 *Your site is published at https://welsigogi.dev/* 메시지가 플로팅 되어있습니다.
+
+Custom domain 에서 본인이 사용할 도메인을 적고 **save** 버튼을 눌러 저장하고 Enforce HTTPS 항목에 체크를 해 줍니다.
+
+이것으로 이제 커스텀 도메인으로 블로그에 접속할 수 있습니다!
+
+
 ## 5. Travis-CI 연동시키기
