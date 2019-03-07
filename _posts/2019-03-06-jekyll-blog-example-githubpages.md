@@ -5,9 +5,10 @@ tags: [Jekyll, Blog, Example, Github pages, 지킬, 블로그, 예제, 깃헙 �
 comments: true
 ---
 
-> 이 포스트에서는 Jekyll을 사용하여 Github pages와 연계한 블로그를 만드는 과정을 소개합니다.
-> 이 포스트는 MacOS 기준으로 작성되었습니다.
----
+> 이 포스트에서는 Jekyll을 사용하여 Github pages와 연계한 블로그를 만드는 과정부터 테마를 적용시켜서 꾸미는 방법, 
+Travis-CI를 사용하여 빌드 자동화하는 법, 커스텀 도메인(Custom Domain)을 적용하는 방법까지를 설명합니다.
+이 포스트는 MacOS 기준으로 작성되었습니다.
+
 
 ## 1. 지킬(Jekyll) 설치하기
 
@@ -57,10 +58,15 @@ jekyll serve
 
 ---
 
-## 2. 깃헙 레포지토리 생성 (Create Github Repository)
+## 2. 깃헙 레포지토리(Github Repository) 생성
 
 깃헙 레포지토리를 생성합니다. 이름은 자신의 깃헙 계정이름(`username`)을 붙여 `leeheejin.github.io`와 같이 생성합니다.
 ![2019-03-06-1](https://user-images.githubusercontent.com/9789023/53867918-297e4c80-4038-11e9-8d42-830cd8ac44f5.png)
 #### 왜 이런 이름으로 생성해야 하나요?
 > 다음과 같은 이유 때문입니다. [링크](#)
 
+## 3. 지킬(Jekyll)에 테마(Theme) 적용하기
+
+## 4. 커스텀 도메인(Custom Domain) 연결하기
+
+## 5. Travis-CI 연동시키기
