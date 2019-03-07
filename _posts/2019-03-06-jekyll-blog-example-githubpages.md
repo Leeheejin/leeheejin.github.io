@@ -65,7 +65,7 @@ jekyll serve
 
 ---
 
-## 2. 깃헙 레포지토리(Github Repository) 생성
+## 2. 깃헙 레포지토리(Github Repository) 생성 및 연결
 
 깃헙 레포지토리를 생성합니다. 이름은 자신의 깃헙 계정이름(`username`)을 붙여
 `leeheejin.github.io`와 같이 생성합니다.
