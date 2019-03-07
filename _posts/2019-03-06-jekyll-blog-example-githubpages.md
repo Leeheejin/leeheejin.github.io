@@ -7,8 +7,9 @@ comments: true
 
 > 이 포스트는 MacOS 기준으로 작성되었습니다.
 이 포스트에서는 Jekyll을 사용하여 Github pages와 연계한 블로그를 만드는 과정을 설명합니다.
+다양한 도메인 지식을 가진 독자들을 위해 기본 지식을 조금씩 담아 서술하였습니다.
 
-> 구성은 다음과 같습니다.
+> 전체적인 구성은 다음과 같습니다.
 > * 지킬 설치하기
 > * 깃헙 레포지토리와 연동하기
 > * 나만의 테마를 적용시켜서 꾸미기
@@ -18,7 +19,7 @@ comments: true
 
 ## 1. 지킬(Jekyll) 설치하기
 
-#### 지킬은 정적 페이지 생성 도구로써, 마크다운 형식으로 페이지를 제너레이트 해주는 도구입니다.
+#### 지킬은 정적 페이지 생성 도구로써, 마크다운 형식으로 페이지 제너레이트 해주는 도구입니다.
 
 먼저 지킬을 설치합니다.
 
@@ -66,10 +67,93 @@ jekyll serve
 
 ## 2. 깃헙 레포지토리(Github Repository) 생성
 
-깃헙 레포지토리를 생성합니다. 이름은 자신의 깃헙 계정이름(`username`)을 붙여 `leeheejin.github.io`와 같이 생성합니다.
+깃헙 레포지토리를 생성합니다. 이름은 자신의 깃헙 계정이름(`username`)을 붙여
+`leeheejin.github.io`와 같이 생성합니다.
 ![2019-03-06-1](https://user-images.githubusercontent.com/9789023/53867918-297e4c80-4038-11e9-8d42-830cd8ac44f5.png)
 #### 왜 이런 이름으로 생성해야 하나요?
 > 다음과 같은 이유 때문입니다. [링크](#)
+
+사전에 만든 지킬 블로그 디렉토리를 자신의 레포지토리에 연결합시다.
+
+먼저 깃과 연결할 준비를 해줍니다.
+깃 사용을 위해 초기화를 합시다.
+```
+git init
+```
+
+그 뒤 해당 디렉토리 안에 있는 모든 파일들을 깃에 업로드 하겠다는 명렁어를 입력합니다.
+*정확히는 이 명령어는 마지막 버전으로부터 변경이 있는 모든 파일을 의미합니다.*
+```
+git add .
+```
+
+그리고 간단하게 해당 커밋에 대한 설명을 적습니다. `"init"` 부분이 설명을 의미하는 메시지입니다.
+```
+git commit -m "init"
+```
+
+위 명령어들로 **어떤 파일들을 업로드 할 것인지**(`git add .`), 
+**지금의 변경점이 무엇을 위한 변경인지**(`git commit -m "init"`)
+를 결정했으니 이제 **어디에 업로드를 할 것인지**를 결정합니다.
+
+```
+git remote add origin https://github.com/Leeheejin/leeheejin.github.io.git
+```
+
+이 명령어는 위에서 만든 `leeheejin.github.io` 레포지토리에 지금 `git add .` 를 통해 
+업로드하고자 결정한 파일들을 해당 저장소에 업로드 하겠다는 의미입니다.
+독자 분들은 
+
+```
+git remote add origin https://github.com/Leeheejin/leeheejin.github.io.git
+```
+
+에서 
+
+```
+git remote add origin https://github.com/[github 사용자명]/[github 사용자명].github.io 으로.git
+```
+
+와 같은 식으로 변경하여서 명령어를 실행하시면 되겠습니다.
+
+이후,
+
+```
+git push -u origin master
+```
+
+명령어를 통해 해당 저장소의 [master branch](#) 에 푸쉬할 수 있습니다.
+
+해당 명령어를 실행하시면 다음과 같은 화면을 보실 수 있습니다.
+
+```
+Username for 'https://github.com':
+```
+
+그러면 독자분들의 깃헙 유저명을 적으시면 됩니다.
+
+```
+Username for 'https://github.com': leeheejin
+Password for 'https://leeheejin@github.com':
+```
+
+이후 비밀번호를 입력한 뒤
+
+```
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (11/11), 3.88 KiB | 3.88 MiB/s, done.
+Total 11 (delta 0), reused 0 (delta 0)
+To https://github.com/Leeheejin/leeheejin.github.io.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+```
+
+와 같이 성공적으로 파일들이 원격 저장소에 업로드 된 것을 확인할 수 있습니다.
+
+![2019-03-06-3](https://user-images.githubusercontent.com/9789023/53945237-85aea280-4104-11e9-8166-6cee58f6fcfe.png)
 
 ## 3. 지킬(Jekyll)에 테마(Theme) 적용하기
 
