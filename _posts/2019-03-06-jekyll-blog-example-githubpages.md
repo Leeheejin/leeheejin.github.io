@@ -19,7 +19,7 @@ comments: true
 
 ## 1. 지킬(Jekyll) 설치하기
 
-#### 지킬은 정적 페이지 생성 도구로써, 마크다운 형식으로 페이지 제너레이트 해주는 도구입니다.
+#### 지킬은 정적 페이지 생성 도구로써, 마크다운 형식으로 생성해주는 도구입니다.
 
 먼저 지킬을 설치합니다.
 
@@ -173,7 +173,21 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 ![2019-03-06-5](https://user-images.githubusercontent.com/9789023/53950729-2d7d9d80-4110-11e9-8163-69d40cb8b8c4.png)
 
 내려받은 파일들을 자신의 `[github 사용자명].github.io` 디렉토리에 모두 붙여넣기 합니다.
-<mark> 주의! 파일들을 붙여넣을때 기존 디렉토리에 존재하던 파일들을 모두 삭제해야 합니다. </mark>
+> <mark> 주의! </mark> 파일들을 붙여넣을때 기존 디렉토리에 존재하던 파일들을 모두 삭제해야 합니다.
+
+![2019-03-06-6](https://user-images.githubusercontent.com/9789023/53951074-007dba80-4111-11e9-9ccd-0935bb586523.png)
+
+파일을 옮겨 붙이고 나면 디렉토리에는 위 이미지와 같은 파일들이 존재할 것입니다.
+
+이제 실행해 봅시다!
+
+`https://[github 사용자명].github.io` 에 접속하면
+테마가 적용된 블로그를 확인하실 수 있습니다.
+
+![2019-03-06-7](https://user-images.githubusercontent.com/9789023/53951221-53577200-4111-11e9-8b1f-04f17ec36086.png)
+
+> 저는 추가로 프로필 이미지, 블로그 이름, 메뉴 이름들을 변경해서 적용했습니다.
+> * _config.yml 파일에서 `name:` ,`description:`, `avatar:` 항목을 수정하면 됩니다. :)
 
 ## 4. 커스텀 도메인(Custom Domain) 연결하기
 
