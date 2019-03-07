@@ -155,7 +155,25 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 ![2019-03-06-3](https://user-images.githubusercontent.com/9789023/53945237-85aea280-4104-11e9-8166-6cee58f6fcfe.png)
 
+이제 `https://localhost:4000/` 에서만 제공되던 블로그를 `https://leeheejin.github.io` 로 접속할 수 있습니다!
+
 ## 3. 지킬(Jekyll)에 테마(Theme) 적용하기
+
+블로그를 만들고 배포하였다면 이제는 꾸며볼 차례입니다.
+여러 무료로 공개된 테마중에서 마음에 드는 것을 선택하여 테마를 적용하는 방법에 대해서 알아봅시다.
+
+*이 포스트에서는 [kiko-now](https://github.com/barryclark/jekyll-now) 를 사용하였습니다.*
+
+![2019-03-06-4](https://user-images.githubusercontent.com/9789023/53950561-be07ae00-410f-11e9-9344-dee84561cec1.png)
+
+해당 레포지토리에서 오른쪽 상단의 **Fork** 버튼을 클릭하여 자신의 레포지토리로 퍼올 수 있습니다.
+
+퍼온 레포지토리에서 **Clone or download** 버튼을 눌러 해당 레포지토리의 파일들을 내려받고 
+
+![2019-03-06-5](https://user-images.githubusercontent.com/9789023/53950729-2d7d9d80-4110-11e9-8163-69d40cb8b8c4.png)
+
+내려받은 파일들을 자신의 `[github 사용자명].github.io` 디렉토리에 모두 붙여넣기 합니다.
+<mark> 주의! 파일들을 붙여넣을때 기존 디렉토리에 존재하던 파일들을 모두 삭제해야 합니다. </mark>
 
 ## 4. 커스텀 도메인(Custom Domain) 연결하기
 
