@@ -4,12 +4,10 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+### Activities
 
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact
+* Samsung SDS Software Membership 4th (a.k.a sGen Club) - 2014.03 ~ 2016.04
+* Like a Lion 3rd - 2015.03 ~ 2015.07
+* LINE Plus Intern - 2019.01 ~ 2019.02
 
 [leinaere@naver.com](mailto:leinaere@naver.com)
