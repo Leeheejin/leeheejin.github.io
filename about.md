@@ -10,5 +10,3 @@ permalink: /about/
 * Like a Lion 3rd - 2015.03 ~ 2015.07
 * LINE Plus Intern - 2019.01 ~ 2019.02
 * World friends ICT Volunteer - 2019.06 ~ 2019.08
-
-`Contact Me` : [leinaere@naver.com](mailto:leinaere@naver.com)
