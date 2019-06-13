@@ -15,7 +15,7 @@ comments: true
 * 시작 동기
 * 개선점
 * Getting started
-* Full code
+* Example
 
 ## 1. 왜 시작하였나.
 ```
@@ -165,6 +165,16 @@ function getLastDenma() {
         }
 ```
 
+### 나도 해보고 싶어요, getting started
+
+> 카카오톡 봇을 만들기 위해 필요한 것들
+> 1. 안드로이드 기기
+>
+> 2. 카카오톡 봇 JS
+> ![](#)
+> 3. 구글 스마트 알람 캐쳐
+> ![](#)
+
 ### 실행 예제
 
 > 각 명령어 실행 이미지
@@ -175,251 +185,3 @@ function getLastDenma() {
 ![](#)
 3. 가상화폐 시세 검색기
 ![](#)
-
----
-
-### 나도 해보고 싶어요, getting started
-
-Miner의 현재 버전의 소스는 오픈되어 있지 않지만 포스팅에서 소개한 내용은 공개하기로 했습니다.
-
-> 카카오톡 봇을 만들기 위해 필요한 것들
-> 1. 안드로이드 기기
->
-> 2. 카카오톡 봇 JS
-> ![](#)
-> 3. 구글 스마트 알람 캐쳐
-> ![](#)
-
-#### 전체 소스
-
-```javascript
-
-function response(room, msg, sender, isGroupChat, replier, imageDB) {
-
-    run = true;
-
-    msg = msg.trim();
-
-    var test = 0
-    // 디버깅 모드용
-    // 0 정상작동
-    // 1 업데이트
-    // 2 일부 기능 제한
-    var blockApi = '날씨실검시세';
-    // API 종류
-    // 날씨 - 해당 지역 날씨 정보, 미세먼지 정보 반환
-    // 실검 - 네이버 현재 실시간 검색어 Top 10 반환
-    // 시세 - 가상화폐 현재 가격을 반환
-    // 칼로리 - 해당 음식 칼로리 정보 반환
-    // 덴마 알람 - 웹툰 덴마의 업데이트시, 덴경대 집합 반환
-
-    const kiman = ['후우','후','살고싶다','두고봐','기만','연봉','도태'];
-
-    if (test === 1 && msg.includes('미네르')) {
-        replier.reply("상태 : 미네르가 현재 업데이트 중입니다.\n\n " +
-            "현재 버전 : Ver 0.2 released")
-    }
-
-    else if (test === 2) {
-        if (blockApi.includes(msg.substring(5, 6))) {
-            replier.reply("현재 해당 기능은 버그 수정 중입니다.\n\n" +
-                "사용이 제한되었습니다. 빠른 시일 내에 조치하겠습니다.\n\n" +
-                "감사합니다.")
-        }
-    }
-
-    else if (msg.includes('미네르 날씨')) {
-        var result = getWeatherInfo(msg.substring(6));
-        replier.reply(result);
-    }
-
-    else if (msg.includes('미네르 실검')) {
-        var result = getPopSearch();
-        replier.reply(result);
-    }
-
-    else if (msg.includes('미네르 시세')) {
-        var result = getCoinPrice(msg.substring(7));
-        replier.reply(result);
-    }
-
-    else if (msg.includes('미네르 칼로리')) {
-        var result = getCal(msg.substring(7));
-        replier.reply(result);
-    }
-
-    else if (msg === '미네르 나대신 사과해') {
-        replier.reply("사과도 혼자서 못하는\n\n"
-        +sender+"님 대신에\n\n제가 사과드려요\n\n부엉.")
-    }
-
-    else if (msg === '미네르 탕수육 부엉?') {
-        replier.reply("아뇨.(단호)")
-    }
-
-    else if (msg.includes('미네르 민트초코')) {
-        replier.reply("민트초코는 사랑입니다.\n\n부엉.")
-    }
-
-    else if (msg === '미네르 안녕' || msg === '미네르 인사') {
-        replier.reply("안녕하세요.\n\n"
-        +sender
-        +"님.\n\n만나서 반가워요\n\n부엉.")
-    }
-
-    else if(msg === '미네르 위로해줘') {
-        replier.reply(sender+"님은 충분히 노력하셨어요."
-        +"\n\n더 이상 아파하지 않아도 돼요.\n\n부엉.")
-    }
-
-    else if (msg === '미네르 덴마 알람 켜줘') {
-
-        if (roomList.indexOf(room.toString()) < 0) {
-            roomList.push(room.toString());
-            java.lang.Thread({
-                run : function() {
-                    replier.reply("덴마 알람을 켰습니다.\n\n부엉.")
-                    var nowDenma = getLastDenma();
-                    while (roomList.indexOf(room.toString()) > -1) {
-                        java.lang.Thread.sleep(10000); // 10000ms = 10s
-                        var lastDenma = getLastDenma();
-                        if (lastDenma !== nowDenma) {
-                            replier.reply("덴경대 집합!\n\n부엉.")
-                            nowDenma = lastDenma;
-                        }
-                    }
-                }
-            }).start();
-        }
-        else {
-            replier.reply("덴마 알람은 이미 켜져있습니다.\n\n부엉.")
-        }
-    }
-
-    else if (msg === '미네르 덴마 알람 꺼줘') {
-
-        if (roomList.indexOf(room.toString()) > -1) {
-
-            delete roomList[roomList.indexOf(room.toString())];
-
-            replier.reply("덴마 알람을 껐습니다.\n\n부엉.")
-        }
-        else {
-            replier.reply("덴마 알람이 꺼진 상태입니다.\n\n부엉.")
-        }
-    }
-
-    else if (msg.includes('미네르 명령')) {
-
-        replier.reply("미네르의 명령어 목록입니다.\n\n" +
-            "미네르 날씨 [지역명]\n해당 지역의 날씨 정보를 알려줍니다.\n\n" +
-            "미네르 실검\n실시간 검색어 순위를 알려줍니다.\n\n" +
-            "미네르 시세 [가상화폐명]\n해당 가상화폐의 가격을 한화로 알려줍니다.\n\n" +
-            "미네르 칼로리 [음식명]\n해당 음식의 칼로리 정보를 알려줍니다.\n\n" +
-            "미네르 덴마 알람 [켜줘],[꺼줘]\n덴마 업데이트 알람을 켜고 끌 수 있습니다."
-            +"\n\n이상입니다. 부엉.")
-    }
-
-
-    if (sender === "Hbh") {
-        var once = 0
-
-        for (var i = 0; i < kiman.length; i++) {
-            if (msg.includes(kiman[i]) && once === 0) {
-                replier.reply('[알림]\n\n기만이 감지되었습니다.');
-                once = 1;
-            }
-        }
-    }
-}
-
-function getWeatherInfo(pos) {
-
-    var data = Utils.getWebText("https://m.search.naver.com/search.naver?query="
-    +pos+"%20날씨");
-    data = data.replace(/<[^>]+>/g,"");
-    data = data.split("월간")[1];
-    data = data.split("시간별 예보")[0];
-    data = data.trim();
-    data = data.split("\n");
-
-    var results = [];
-    results[0] = data[0];
-    results[1] = data[3].replace("온도","온도: ").trim()+" °C";
-    results[2] = data[4].replace("온도","온도: ").trim()+" °C";
-    results[3] = data[9].replace("먼지","먼지:").trim();
-    results[4] = data[13].replace("습도","습도:").trim()+" %";
-
-    var result = "["+pos+" 날씨 정보]\n\n상태 : "+results.join("\n");
-
-    if (result.length < 40 || result.length > 80) {
-        result = "날씨 정보를 찾지 못했습니다.\n\n부엉."
-    }
-
-    return result;
-}
-
-function getCoinPrice(pos) {
-
-    var data = Utils.getWebText("https://m.search.daum.net/kakao?w=tot&DA=SH1&q="
-    +pos+"%20%EA%B0%80%EA%B2%A9");
-    data = data.split('txt_price">')[1];
-    data = data.split("<")[0].trim();
-
-    var result = "[현재 "+pos+" 시세]\n\n"+data+"원 입니다.";
-
-    return result;
-}
-
-function getPopSearch() {
-
-    var u = Utils.getWebText("https://www.naver.com")
-    var a = u.split("급상승 검색어 검색어")
-    var b = a[1].split("11")
-    var c = b[0].replace(/(<([^>]+)>)/g,"")
-    c = c.replace(/\n\n\n/g,"\n")
-    .replace(/(?![0-9]+) /g,"")
-    .trim()
-    .replace(/(?=(\D))\b/g,".")
-
-    return "[실시간 급상승 검색어]\n "+c;
-}
-
-function getCal(pos) {
-    var data = Utils.getWebText("http://www.dietshin.com/"
-    +"calorie/calorie_search.asp?keyword="+pos);
-    data = data.replace(/(<([^>]+)>)/g, "");
-    data = data.replace(/ /gi, "");
-    data = data.split("음식명\n칼로리")[1];
-    data = data.split("kcal")[0];
-    data = data.trim();
-
-    var result = data+"kcal 입니다.";
-
-    if (result.length > 40) {
-        result = "칼로리 정보를 찾지 못했습니다.\n\n부엉."
-    }
-    return result;
-}
-
-function getLastDenma() {
-    var data = Utils.getWebText("https://comic.naver.com/webtoon/"
-    +"list.nhn?titleId=119874&weekday=tue");
-    data = data.split(",'119874',")[1];
-    data = data.split(")")[0];
-
-    return data;
-}
-//이 아래 6가지 메소드는 스크립트 액티비티에서 사용하는 메소드들
-function onCreate(savedInstanceState, activity) {}
-function onStart(activity) {}
-function onResume(activity) {}
-function onPause(activity) {}
-function onStop(activity) {}
-function onDestroy(activity) {}
-
-denmaUpdate = 0;
-threadCheck = false;
-roomList = [];
-
-```
