@@ -52,7 +52,7 @@ comments: true
 ## 3. 날씨, 실검 기능만을 가진 Miner 에서 Miner++ 로
 
 ```
-처음의 오픈소스를 뒤적거리면서 필요한 기능을 붙이다가 직접 필요한 기능을 만들어 보고자 하는 욕심이 생겼어요.
+처음의 오픈소스를 뒤적거리면서 필요한 기능을 붙이다가 직접 기능을 만들어 보고자 하는 욕심이 생겼어요.
 그래서 직접 만들어 보기로 했습니다.
 추가로 정의한 필요 기능은 다음과 같아요.
 ```
@@ -90,8 +90,8 @@ function getCoinPrice(pos) {
 ```javascript
 
 function getCal(pos) {
-    var data = Utils.getWebText("http://www.dietshin.com/calorie/calorie_search.asp?"
-    +"keyword="+pos);
+    var data = Utils.getWebText("http://www.dietshin.com/"
+    +"calorie/calorie_search.asp?keyword="+pos);
     data = data.replace(/(<([^>]+)>)/g, "");
     data = data.replace(/ /gi, "");
     data = data.split("음식명\n칼로리")[1];
@@ -261,7 +261,9 @@ function response(room, msg, sender, isGroupChat, replier, imageDB) {
     }
 
     else if (msg === '미네르 안녕' || msg === '미네르 인사') {
-        replier.reply("안녕하세요.\n\n"+sender+"님.\n\n만나서 반가워요\n\n부엉.")
+        replier.reply("안녕하세요.\n\n"
+        +sender
+        +"님.\n\n만나서 반가워요\n\n부엉.")
     }
 
     else if(msg === '미네르 위로해줘') {
@@ -387,8 +389,8 @@ function getPopSearch() {
 }
 
 function getCal(pos) {
-    var data = Utils.getWebText("http://www.dietshin.com/calorie/calorie_search.asp?"
-    +"keyword="+pos);
+    var data = Utils.getWebText("http://www.dietshin.com/"
+    +"calorie/calorie_search.asp?keyword="+pos);
     data = data.replace(/(<([^>]+)>)/g, "");
     data = data.replace(/ /gi, "");
     data = data.split("음식명\n칼로리")[1];
