@@ -246,7 +246,8 @@ function response(room, msg, sender, isGroupChat, replier, imageDB) {
     }
 
     else if (msg === '미네르 나대신 사과해') {
-        replier.reply("사과도 혼자서 못하는\n\n"+sender+"님 대신에\n\n제가 사과드려요\n\n부엉.")
+        replier.reply("사과도 혼자서 못하는\n\n"
+        +sender+"님 대신에\n\n제가 사과드려요\n\n부엉.")
     }
 
     else if (msg === '미네르 탕수육 부엉?') {
@@ -262,7 +263,8 @@ function response(room, msg, sender, isGroupChat, replier, imageDB) {
     }
 
     else if(msg === '미네르 위로해줘') {
-        replier.reply(sender+"님은 충분히 노력하셨어요.\n\n더 이상 아파하지 않아도 돼요.\n\n부엉.")
+        replier.reply(sender+"님은 충분히 노력하셨어요."
+        +"\n\n더 이상 아파하지 않아도 돼요.\n\n부엉.")
     }
 
     else if (msg === '미네르 덴마 알람 켜줘') {
@@ -309,7 +311,8 @@ function response(room, msg, sender, isGroupChat, replier, imageDB) {
             "미네르 실검\n실시간 검색어 순위를 알려줍니다.\n\n" +
             "미네르 시세 [가상화폐명]\n해당 가상화폐의 가격을 한화로 알려줍니다.\n\n" +
             "미네르 칼로리 [음식명]\n해당 음식의 칼로리 정보를 알려줍니다.\n\n" +
-            "미네르 덴마 알람 [켜줘],[꺼줘]\n덴마 업데이트 알람을 켜고 끌 수 있습니다.\n\n이상입니다. 부엉.")
+            "미네르 덴마 알람 [켜줘],[꺼줘]\n덴마 업데이트 알람을 켜고 끌 수 있습니다."
+            +"\n\n이상입니다. 부엉.")
     }
 
 
