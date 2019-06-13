@@ -8,8 +8,8 @@ comments: true
 > 이 포스트는 MacOS 기준으로 작성되었습니다.
 이 포스트에서는 카카오톡 봇 JS 어플리케이션을 사용하여 필요 기능을 만들게 된 과정과 결과물을 설명합니다.
 다양한 도메인 지식을 가진 독자들을 위해 기본 지식을 조금씩 담아 서술하였습니다.
-
-> 전체적인 구성은 다음과 같습니다.
+>
+> #### 전체적인 구성은 다음과 같습니다.
 > * 시작 동기
 > * 개선점
 > * Getting started
@@ -72,7 +72,9 @@ comments: true
 
 function getCoinPrice(pos) {
 
-    var data = Utils.getWebText("https://m.search.daum.net/kakao?w=tot&DA=SH1&q="+pos+"%20%EA%B0%80%EA%B2%A9");
+    var data = Utils.getWebText("https://m.search.daum.net/kakao?w=tot&DA=SH1&q="
+    +pos+
+    "%20%EA%B0%80%EA%B2%A9");
     data = data.split('txt_price">')[1];
     data = data.split("<")[0].trim();
 
@@ -86,7 +88,8 @@ function getCoinPrice(pos) {
 ```javascript
 
 function getCal(pos) {
-    var data = Utils.getWebText("http://www.dietshin.com/calorie/calorie_search.asp?keyword="+pos);
+    var data = Utils.getWebText("http://www.dietshin.com/calorie/calorie_search.asp?"
+    +"keyword="+pos);
     data = data.replace(/(<([^>]+)>)/g, "");
     data = data.replace(/ /gi, "");
     data = data.split("음식명\n칼로리")[1];
@@ -106,7 +109,8 @@ function getCal(pos) {
 ```javascript
 
 function getLastDenma() {
-    var data = Utils.getWebText("https://comic.naver.com/webtoon/list.nhn?titleId=119874&weekday=tue");
+    var data = Utils.getWebText("https://comic.naver.com/webtoon/"
+    +"list.nhn?titleId=119874&weekday=tue");
     data = data.split(",'119874',")[1];
     data = data.split(")")[0];
 
@@ -188,15 +192,6 @@ Miner의 현재 버전의 소스는 오픈되어 있지 않지만 포스팅에�
 ```javascript
 
 function response(room, msg, sender, isGroupChat, replier, imageDB) {
-    /** @param {String} room - 방 이름
-     * @param {String} msg - 메세지 내용
-     * @param {String} sender - 발신자 이름
-     * @param {Boolean} isGroupChat - 단체채팅 여부
-     * @param {Object} replier - 세션 캐싱 답장 메소드 객체
-     * @param {Object} imageDB - 프로필 이미지와 수신된 이미지 캐싱 객체
-     * @method imageDB.getImage() - 수신된 이미지가 있을 경우 Base64 인코딩 되어있는 JPEG 이미지 반환, 기본 값 null
-     * @method imageDB.getProfileImage() - Base64 인코딩 되어있는 JPEG 프로필 이미지 반환, 기본 값 null
-     * @method replier.reply("문자열") - 메시지가 도착한 방에 답장을 보내는 메소드 */
 
     run = true;
 
@@ -336,7 +331,8 @@ function response(room, msg, sender, isGroupChat, replier, imageDB) {
 
 function getWeatherInfo(pos) {
 
-    var data = Utils.getWebText("https://m.search.naver.com/search.naver?query="+pos+"%20날씨");
+    var data = Utils.getWebText("https://m.search.naver.com/search.naver?query="
+    +pos+"%20날씨");
     data = data.replace(/<[^>]+>/g,"");
     data = data.split("월간")[1];
     data = data.split("시간별 예보")[0];
@@ -361,7 +357,8 @@ function getWeatherInfo(pos) {
 
 function getCoinPrice(pos) {
 
-    var data = Utils.getWebText("https://m.search.daum.net/kakao?w=tot&DA=SH1&q="+pos+"%20%EA%B0%80%EA%B2%A9");
+    var data = Utils.getWebText("https://m.search.daum.net/kakao?w=tot&DA=SH1&q="
+    +pos+"%20%EA%B0%80%EA%B2%A9");
     data = data.split('txt_price">')[1];
     data = data.split("<")[0].trim();
 
@@ -376,13 +373,17 @@ function getPopSearch() {
     var a = u.split("급상승 검색어 검색어")
     var b = a[1].split("11")
     var c = b[0].replace(/(<([^>]+)>)/g,"")
-    c = c.replace(/\n\n\n/g,"\n").replace(/(?![0-9]+) /g,"").trim().replace(/(?=(\D))\b/g,".")
+    c = c.replace(/\n\n\n/g,"\n")
+    .replace(/(?![0-9]+) /g,"")
+    .trim()
+    .replace(/(?=(\D))\b/g,".")
 
     return "[실시간 급상승 검색어]\n "+c;
 }
 
 function getCal(pos) {
-    var data = Utils.getWebText("http://www.dietshin.com/calorie/calorie_search.asp?keyword="+pos);
+    var data = Utils.getWebText("http://www.dietshin.com/calorie/calorie_search.asp?"
+    +"keyword="+pos);
     data = data.replace(/(<([^>]+)>)/g, "");
     data = data.replace(/ /gi, "");
     data = data.split("음식명\n칼로리")[1];
@@ -398,7 +399,8 @@ function getCal(pos) {
 }
 
 function getLastDenma() {
-    var data = Utils.getWebText("https://comic.naver.com/webtoon/list.nhn?titleId=119874&weekday=tue");
+    var data = Utils.getWebText("https://comic.naver.com/webtoon/"
+    +"list.nhn?titleId=119874&weekday=tue");
     data = data.split(",'119874',")[1];
     data = data.split(")")[0];
 
