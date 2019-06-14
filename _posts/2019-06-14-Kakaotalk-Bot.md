@@ -201,6 +201,7 @@ function getLastDenma() {
 여기다가 소스 코드를 적고 오른쪽 하단의 **플로피 디스켓** 모양을 누르면 소스를 저장할 수 있습니다.
 소스는 항상 잘 저장해 주세요!
 
+
 ![getting-started-04](https://github.com/Leeheejin/leeheejin.github.io/blob/master/images/2019-06-14/getting-started-04.jpeg?raw=true)
 
 그 뒤 메인 화면에서 **스크립트 리로드** 버튼을 눌러 현재의 소스를 반영할 수 있습니다.
