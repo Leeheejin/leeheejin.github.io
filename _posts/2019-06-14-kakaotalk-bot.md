@@ -172,15 +172,19 @@ function getLastDenma() {
 
 ## 4. 나도 해보고 싶어요, getting started
 
-> 카카오톡 봇을 만들기 위해 필요한 것들
-> 1. 안드로이드 기기
->
-> 2. 카카오톡 봇 JS
-> ![kakaotalk-bot](https://github.com/Leeheejin/leeheejin.github.io/blob/master/images/2019-06-14/kakaotalkbot.jpeg?raw=true)
-> 3. Wear OS by Google
-> ![google](https://github.com/Leeheejin/leeheejin.github.io/blob/master/images/2019-06-14/google.jpeg?raw=true)
+### 카카오톡 봇을 만들기 위해 필요한 것들
 
-#### 카카오톡 봇 JS 실행하기
+* 안드로이드 기기
+
+* 카카오톡 봇 JS
+![kakaotalk-bot](https://github.com/Leeheejin/leeheejin.github.io/blob/master/images/2019-06-14/kakaotalkbot.jpeg?raw=true)
+
+* Wear OS by Google
+![google](https://github.com/Leeheejin/leeheejin.github.io/blob/master/images/2019-06-14/google.jpeg?raw=true)
+
+---
+
+### 카카오톡 봇 JS 실행하기
 
 카카오톡 봇 JS 를 실행하면 아래와 같은 화면을 보실 수 있습니다.
 
@@ -196,6 +200,10 @@ function getLastDenma() {
 ![getting-started-02](https://github.com/Leeheejin/leeheejin.github.io/blob/master/images/2019-06-14/getting-started-02.jpeg?raw=true)
 
 이런 화면을 볼 수 있는데 **카카오톡 봇** 과 **Wear OS by Google** 의 오른쪽 체크박스에 체크를 해 줍니다.
+
+---
+
+### 카카오톡 봇 JS 소스 적용하기
 
 다음은 봇의 소스를 변경하는 방법입니다.
 카카오톡 봇 JS 어플리케이션의 맨 오른쪽 항목에 **에디터** 라는 항목에 봇 소스 코드를 적을 수 있습니다.
