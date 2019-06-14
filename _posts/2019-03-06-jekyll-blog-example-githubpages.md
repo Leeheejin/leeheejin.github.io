@@ -160,6 +160,8 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 이제 `https://localhost:4000/` 에서만 제공되던 블로그를 `https://leeheejin.github.io` 로 접속할 수 있습니다!
 
+---
+
 ## 3. 지킬(Jekyll)에 테마(Theme) 적용하기
 
 블로그를 만들고 배포하였다면 이제는 꾸며볼 차례입니다.
@@ -194,6 +196,8 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 > 저는 추가로 프로필 이미지, 블로그 이름, 메뉴 이름들을 변경해서 적용했습니다.
 > * _config.yml 파일에서 `name:` ,`description:`, `avatar:` 항목을 수정하면 됩니다. :)
+
+---
 
 ## 4. 커스텀 도메인(Custom Domain) 연결하기
 
@@ -236,3 +240,5 @@ Godaddy에서의 설정은 이것으로 끝입니다. 이제는 깃헙 레포지
 Custom domain 에서 본인이 사용할 도메인을 적고 **save** 버튼을 눌러 저장하고 Enforce HTTPS 항목에 체크를 해 줍니다.
 
 이것으로 이제 커스텀 도메인으로 블로그에 접속할 수 있습니다!
+
+---
