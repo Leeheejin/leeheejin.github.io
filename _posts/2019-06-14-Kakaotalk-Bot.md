@@ -66,7 +66,7 @@ comments: true
 
 ### 그래서 소스는?
 
-소스는 오픈소스의 경우 이 [블로그](#)와 이 [블로그](#)의 도움을 받았어요.
+소스는 오픈소스의 경우 이 [블로그](http://blog.naver.com/PostView.nhn?blogId=dt3141592&logNo=221459185203&parentCategoryNo=&categoryNo=35&viewDate=&isShowPopularPosts=true&from=search)와 이 [레포지토리](https://github.com/DarkTornado/KakaoTalkBot-Examples)의 도움을 받았어요.
 
 직접 작성한 소스는 3가지 함수로 아래와 같습니다.
 
@@ -100,7 +100,7 @@ function getCal(pos) {
 
     var result = data+"kcal 입니다.";
 
-    if (result.length > 40) {
+    if (result.length > pos.length + 30) {
         result = "칼로리 정보를 찾지 못했습니다.\n\n부엉."
     }
     return result;
@@ -171,17 +171,55 @@ function getLastDenma() {
 > 1. 안드로이드 기기
 >
 > 2. 카카오톡 봇 JS
-> ![](#)
-> 3. 구글 스마트 알람 캐쳐
-> ![](#)
+> ![kakaotalk-bot]()
+> 3. Wear OS by Google
+> ![google](#)
+
+#### 카카오톡 봇 JS 실행하기
+
+카카오톡 봇 JS 를 실행하면 아래와 같은 화면을 보실 수 있습니다.
+
+![getting-started-01](#)
+
+실행하게 되면 보시는 이미지와 같이 어플리케이션 화면에서
+빨갛게 표시된 <mark> 알림 읽기 권한을 확인할 수 없습니다. </mark>
+라는 문구를 확인하실 수 있습니다. 
+알림 읽기 권한을 줘야 카카오톡 봇이 알림에 마치 실제 사용자처럼 반응할 수 있기 때문에 권한을 줍시다.
+
+`권한 설정하기` 버튼을 누르게 되면 
+
+![getting-started-02](#)
+
+이런 화면을 볼 수 있는데 **카카오톡 봇** 과 **Wear OS by Google** 의 오른쪽 체크박스에 체크를 해 줍니다.
+
+다음은 봇의 소스를 변경하는 방법입니다.
+카카오톡 봇 JS 어플리케이션의 맨 오른쪽 항목에 **에디터** 라는 항목에 봇 소스 코드를 적을 수 있습니다.
+**에디터** 항목을 누르면 볼 수 있는 화면은 아래와 비슷합니다. `(화면이 다르다고 놀라지 마세요. 본 이미지는 이미 소스가 작성된 작성자 기준의 화면입니다!)`
+
+![getting-started-03](#)
+
+여기다가 소스 코드를 적고 오른쪽 하단의 **플로피 디스켓** 모양을 누르면 소스를 저장할 수 있습니다.
+소스는 항상 잘 저장해 주세요!
+
+![getting-started-03](#)
+
+그 뒤 메인 화면에서 **스크립트 리로드** 버튼을 눌러 현재의 소스를 반영할 수 있습니다.
+<mark> 참! 봇 작동 항목에 슬라이드 바를 활성화 해주는 것을 잊지 마세요! </mark>
 
 ### 실행 예제
 
 > 각 명령어 실행 이미지
 
 1. 덴마 업데이트 알람
-![](#)
+
+    (1) 실행
+    ![denmaOn](#)
+    
+    (2) 종료
+    ![denmaOff](#)
+
 2. 음식 칼로리 계산기
-![](#)
+![cal](#)
+
 3. 가상화폐 시세 검색기
-![](#)
+![bitcoin](#)
