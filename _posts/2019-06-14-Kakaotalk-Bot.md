@@ -171,15 +171,15 @@ function getLastDenma() {
 > 1. 안드로이드 기기
 >
 > 2. 카카오톡 봇 JS
-> ![kakaotalk-bot]()
+> ![kakaotalk-bot](https://github.com/Leeheejin/leeheejin.github.io/blob/master/images/2019-06-14/kakaotalkbot.jpeg?raw=true)
 > 3. Wear OS by Google
-> ![google](#)
+> ![google](https://github.com/Leeheejin/leeheejin.github.io/blob/master/images/2019-06-14/google.jpeg?raw=true)
 
 #### 카카오톡 봇 JS 실행하기
 
 카카오톡 봇 JS 를 실행하면 아래와 같은 화면을 보실 수 있습니다.
 
-![getting-started-01](#)
+![getting-started-01](https://github.com/Leeheejin/leeheejin.github.io/blob/master/images/2019-06-14/getting-started-01.jpeg?raw=true)
 
 실행하게 되면 보시는 이미지와 같이 어플리케이션 화면에서
 빨갛게 표시된 <mark> 알림 읽기 권한을 확인할 수 없습니다. </mark>
@@ -188,7 +188,7 @@ function getLastDenma() {
 
 `권한 설정하기` 버튼을 누르게 되면 
 
-![getting-started-02](#)
+![getting-started-02](https://github.com/Leeheejin/leeheejin.github.io/blob/master/images/2019-06-14/getting-started-02.jpeg?raw=true)
 
 이런 화면을 볼 수 있는데 **카카오톡 봇** 과 **Wear OS by Google** 의 오른쪽 체크박스에 체크를 해 줍니다.
 
@@ -196,12 +196,12 @@ function getLastDenma() {
 카카오톡 봇 JS 어플리케이션의 맨 오른쪽 항목에 **에디터** 라는 항목에 봇 소스 코드를 적을 수 있습니다.
 **에디터** 항목을 누르면 볼 수 있는 화면은 아래와 비슷합니다. `(화면이 다르다고 놀라지 마세요. 본 이미지는 이미 소스가 작성된 작성자 기준의 화면입니다!)`
 
-![getting-started-03](#)
+![getting-started-03](https://github.com/Leeheejin/leeheejin.github.io/blob/master/images/2019-06-14/getting-started-03.jpeg?raw=true)
 
 여기다가 소스 코드를 적고 오른쪽 하단의 **플로피 디스켓** 모양을 누르면 소스를 저장할 수 있습니다.
 소스는 항상 잘 저장해 주세요!
 
-![getting-started-03](#)
+![getting-started-04](https://github.com/Leeheejin/leeheejin.github.io/blob/master/images/2019-06-14/getting-started-04.jpeg?raw=true)
 
 그 뒤 메인 화면에서 **스크립트 리로드** 버튼을 눌러 현재의 소스를 반영할 수 있습니다.
 <mark> 참! 봇 작동 항목에 슬라이드 바를 활성화 해주는 것을 잊지 마세요! </mark>
@@ -213,13 +213,21 @@ function getLastDenma() {
 1. 덴마 업데이트 알람
 
     (1) 실행
-    ![denmaOn](#)
+    ![denmaOn](https://github.com/Leeheejin/leeheejin.github.io/blob/master/images/2019-06-14/denmaOn.png?raw=true)
     
     (2) 종료
-    ![denmaOff](#)
+    ![denmaOff](https://github.com/Leeheejin/leeheejin.github.io/blob/master/images/2019-06-14/denmaOff.png?raw=true)
+
+아쉽게도 작성일 당시 덴마가 업데이트 되지 않아서 덴경대 집합 메시지를 미네르가 보내는걸 보여드릴 수가 없었습니다.(...)
 
 2. 음식 칼로리 계산기
-![cal](#)
+![cal](https://github.com/Leeheejin/leeheejin.github.io/blob/master/images/2019-06-14/cal.png?raw=true)
 
 3. 가상화폐 시세 검색기
-![bitcoin](#)
+![bitcoin](https://github.com/Leeheejin/leeheejin.github.io/blob/master/images/2019-06-14/bitcoin.png?raw=true)
+
+4. 실시간 급상승 검색어
+![pop](https://github.com/Leeheejin/leeheejin.github.io/blob/master/images/2019-06-14/pop.png?raw=true)
+
+5. 지역 날씨 및 미세먼지
+![weather](https://github.com/Leeheejin/leeheejin.github.io/blob/master/images/2019-06-14/weather.png?raw=true)
