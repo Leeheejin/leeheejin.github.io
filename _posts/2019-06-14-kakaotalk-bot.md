@@ -69,7 +69,7 @@ comments: true
 
 ### 그래서 소스는?
 
-소스는 오픈소스의 경우 이 [블로그](http://blog.naver.com/PostView.nhn?blogId=dt3141592&logNo=221459185203&parentCategoryNo=&categoryNo=35&viewDate=&isShowPopularPosts=true&from=search)와 이 [레포지토리](https://github.com/DarkTornado/KakaoTalkBot-Examples)의 도움을 받았어요.
+소스는 오픈소스의 경우 이 [블로그](http://blog.naver.com/PostView.nhn?blogId=dt3141592&logNo=221459185203&parentCategoryNo=&categoryNo=35&viewDate=&isShowPopularPosts=true&from=search)와 이 [레포지토리](https://github.com/DarkTornado/KakaoTalkBot-Examples)의 도움을 받았습니다.
 
 직접 작성한 소스는 3가지 함수로 아래와 같습니다.
 
@@ -170,7 +170,7 @@ function getLastDenma() {
 
 ---
 
-## 4. 나도 해보고 싶어요, getting started
+## 4. Getting started
 
 ### 카카오톡 봇을 만들기 위해 필요한 것들
 
