@@ -74,7 +74,7 @@ jekyll serve
 ![2019-03-06-1](https://user-images.githubusercontent.com/9789023/53867918-297e4c80-4038-11e9-8d42-830cd8ac44f5.png)
 #### 왜 이런 이름으로 생성해야 하나요?
 
-> 다음과 같은 이유 때문입니다. [링크](#)
+> 다음과 같은 이유 때문입니다. [링크](https://help.github.com/en/articles/user-organization-and-project-pages)
 
 사전에 만든 지킬 블로그 디렉토리를 자신의 레포지토리에 연결합시다.
 
@@ -125,7 +125,7 @@ git remote add origin https://github.com/[github 사용자명]/[github 사용자
 git push -u origin master
 ```
 
-명령어를 통해 해당 저장소의 [master branch](#) 에 푸쉬할 수 있습니다.
+명령어를 통해 해당 저장소의 [master branch](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell) 에 푸쉬할 수 있습니다.
 
 해당 명령어를 실행하시면 다음과 같은 화면을 보실 수 있습니다.
 
