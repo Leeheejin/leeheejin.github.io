@@ -10,3 +10,5 @@ permalink: /about/
 * Like a Lion 3rd - 2015.03 ~ 2015.07
 * LINE Plus Intern - 2019.01 ~ 2019.02
 * World friends ICT Volunteer - 2019.06 ~ 2019.08
+* Kakao Corp Intern - 2019.12 ~ 2019.02
+* Kakao Corp Dev - 2020.03 ~
